@@ -15,6 +15,7 @@
   "keywords": [],
   "license": "MIT",
   "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-hot-loader": "4.13.0",
@@ -26,11 +27,11 @@
     "@babel/preset-env": "7.14.5",
     "@babel/preset-react": "7.14.5",
     "@babel/preset-typescript": "7.14.5",
-    "@electron-forge/cli": "6.0.0-beta.57",
-    "@electron-forge/maker-deb": "6.0.0-beta.57",
-    "@electron-forge/maker-rpm": "6.0.0-beta.57",
-    "@electron-forge/maker-squirrel": "6.0.0-beta.57",
-    "@electron-forge/maker-zip": "6.0.0-beta.57",
+    "@electron-forge/cli": "^6.0.0-beta.63",
+    "@electron-forge/maker-deb": "^6.0.0-beta.63",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.63",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
+    "@electron-forge/maker-zip": "^6.0.0-beta.63",
     "@electron-forge/plugin-webpack": "6.0.0-beta.57",
     "@marshallofsound/webpack-asset-relocator-loader": "0.5.0",
     "@testing-library/jest-dom": "5.14.1",
@@ -65,13 +66,35 @@
   "config": {
     "forge": {
       "packagerConfig": {
-        "name": "Electron starter",
-        "executableName": "electron-starter",
+        "name": "TestMan",
+        "executableName": "testman",
         "icon": "assets/icon",
         "extraResource": [
           "assets"
         ]
       },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "electron_react_typescript"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ],
       "plugins": [
         [
           "@electron-forge/plugin-webpack",
@@ -92,28 +115,6 @@
             }
           }
         ]
-      ],
-      "makers": [
-        {
-          "name": "@electron-forge/maker-squirrel",
-          "config": {
-            "name": "Electron Starter"
-          }
-        },
-        {
-          "name": "@electron-forge/maker-zip",
-          "platforms": [
-            "darwin"
-          ]
-        },
-        {
-          "name": "@electron-forge/maker-deb",
-          "config": {}
-        },
-        {
-          "name": "@electron-forge/maker-rpm",
-          "config": {}
-        }
       ]
     }
   }
