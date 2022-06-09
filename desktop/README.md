@@ -1,35 +1,53 @@
-## Electron + TypeScript + React
-
-Boilerplate for a project using Electron, React and Typescript.
-
-## Installation
-
-Use a package manager of your choice (npm, yarn, etc.) in order to install all dependencies
-
+## Quick start
+install
 ```bash
 yarn
+# or
+npm install
 ```
 
-## Usage
-
-Just run `start` script.
-
+start dev
 ```bash
-yarn start
+npm run dev
 ```
 
-## Packaging
+## Overview
+- webpack
+- electron
+- electron-builder
+- electron-log
+- react
+- react-router
+- redux
+- ant-design
+- remixicon
+- less
+- typescript
+- eslint
+- prettier
 
-To generate the project package based on the OS you're running on, just run:
+## DevTools
 
-```bash
-yarn package
+Toggle DevTools:
+
+* OSX: <kbd>Cmd</kbd> <kbd>Alt</kbd> <kbd>I</kbd> or <kbd>F12</kbd>
+* Linux: <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>I</kbd> or <kbd>F12</kbd>
+* Windows: <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>I</kbd> or <kbd>F12</kbd>
+
+## Build package
+
+Modify [builder.config.ts](./build/builder.config.ts) to edit package info.
+
+For a full list of options see: https://www.electron.build/configuration/configuration
+
+Create a package for OSX, Windows and Linux
+```
+npm run build
 ```
 
-## Contributing
+Please check the `release` folder after the build is complete.
 
-Pull requests are always welcome 😃.
+
 
 ## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](./LICENSE)
