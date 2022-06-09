@@ -42,9 +42,9 @@ export const trayMenus: MenuItemConstructorOptions[] = [
           // app.setAboutPanelOptions({
           //   applicationName: $tools.APP_NAME,
           //   applicationVersion: $tools.APP_VERSION,
-          //   copyright: 'lanten',
-          //   authors: ['lanten'],
-          //   website: 'https://github.com/lanten/electron-antd',
+          //   copyright: 'dipankar08',
+          //   authors: ['dipankar'],
+          //   website: 'https://github.com/dipankar08/testman',
           //   iconPath: $tools.APP_ICON,
           // })
           // app.showAboutPanel()

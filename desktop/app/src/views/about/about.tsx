@@ -1,6 +1,5 @@
-import React from 'react'
 import { shell } from 'electron'
-
+import React from 'react'
 import './about.less'
 
 const About: React.FC<PageProps> = () => {
@@ -15,7 +14,7 @@ const About: React.FC<PageProps> = () => {
         Copyright © {new Date().getFullYear()}{' '}
         <a
           onClick={() => {
-            shell.openExternal('https://github.com/lanten')
+            shell.openExternal('https://github.com/dipankar08/testman')
           }}
         >
           lanten.
