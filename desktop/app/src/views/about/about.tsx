@@ -17,9 +17,9 @@ const About: React.FC<PageProps> = () => {
             shell.openExternal('https://github.com/dipankar08/testman')
           }}
         >
-          lanten.
+          Dipankar Dutta.
         </a>{' '}
-        All rights (demo)
+        All rights
       </p>
     </div>
   )

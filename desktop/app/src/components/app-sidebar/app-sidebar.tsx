@@ -1,9 +1,9 @@
-import React from 'react'
 import { Tooltip } from 'antd'
-
-import AppSideMenus from './side-menus.json'
+import React from 'react'
 import './app-sidebar.less'
+import { AppSideMenus } from './menus'
 
+// define icon from https://remixicon.com/
 interface SideMenuItem {
   key: string
   href: string

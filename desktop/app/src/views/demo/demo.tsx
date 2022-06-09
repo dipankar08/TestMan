@@ -1,7 +1,6 @@
-import * as React from 'react'
-import { Button, Input, Spin, Card } from 'antd'
-
 import { withStore } from '@/core/store'
+import { Button, Card, Input, Spin } from 'antd'
+import * as React from 'react'
 
 interface DemoProps extends PageProps, StoreProps {
   count: StoreStates['count']
@@ -39,7 +38,7 @@ export default class Demo extends React.Component<DemoProps, DemoState> {
     const { count: reduxCount, countAlias } = this.props
     return (
       <div className="layout-padding">
-        <Card title="Redux Test" className="mb-16">
+        <Card title="Redux Testxxx" className="mb-16">
           <p>redux count : {reduxCount}</p>
           <p>redux countAlias : {countAlias}</p>
 

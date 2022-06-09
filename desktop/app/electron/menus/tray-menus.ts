@@ -2,6 +2,12 @@ import { MenuItemConstructorOptions } from 'electron'
 
 export const trayMenus: MenuItemConstructorOptions[] = [
   {
+    label: 'REST API TEST',
+    click: (): void => {
+      $tools.createWindow('RestApi')
+    },
+  },
+  {
     label: 'Home',
     click: (): void => {
       $tools.createWindow('Home')

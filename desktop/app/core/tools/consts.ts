@@ -15,10 +15,12 @@ export const DEFAULT_WINDOW_OPTIONS: BrowserWindowConstructorOptions = {
   height: 600,
   show: false,
   hasShadow: true,
+  frame: true,
   webPreferences: {
     contextIsolation: false,
     nodeIntegration: true,
     scrollBounce: true,
+    webSecurity: false,
   },
   titleBarStyle: 'hidden', // 隐藏标题栏, 但显示窗口控制按钮
   // frame: process.platform === 'darwin' ? true : false, // 无边框窗口

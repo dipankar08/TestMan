@@ -1,4 +1,5 @@
 // common
+export const RestApi = import('./views/rest_api/rest_api')
 export const NoMatch = import('./views/common/no-match')
 export const AlertModal = import('./views/common/alert-modal')
 export const Home = undefined
