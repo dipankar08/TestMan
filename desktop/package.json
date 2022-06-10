@@ -82,6 +82,8 @@
   "homepage": "https://github.com/dipankar08/testman#readme",
   "dependencies": {
     "corexxx": "^1.0.87",
+    "monaco-editor": "^0.33.0",
+    "react-monaco-editor": "^0.48.0",
     "ws": "^8.8.0"
   }
 }

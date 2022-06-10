@@ -11,6 +11,18 @@ export const AppSideMenus = [
     title: 'WebSocket API',
     icon: 'plug',
   },
+  {
+    key: 'ws_test',
+    href: '#/ws_test',
+    title: 'WebSocket Test',
+    icon: 'plug',
+  },
+  {
+    key: 'Demo',
+    href: '#/demo',
+    title: 'Home',
+    icon: 'home-3',
+  },
   /*
   {
     key: 'rest_api_test',

@@ -1,15 +1,16 @@
-import { Button, Collapse, Input } from 'antd'
-import { dassert, dcolors, dlog } from 'corexxx'
+import { Tabs } from 'antd'
+import { dlog } from 'corexxx'
 import React, { useState } from 'react'
+import MonacoEditor from 'react-monaco-editor'
 import WebSocket from 'ws'
-import './ws_api.less'
+import './ws_test.less'
 
 type TResult = { icon: string; text: string; details: string; color: string }
 
-const WSApi: React.FC<PageProps> = () => {
+const WSTest: React.FC<PageProps> = () => {
   dlog.d('rendered')
   let ws = React.useRef<WebSocket | null>()
-  let [method, setMethod] = useState('GET')
+  let [code, setCode] = useState('')
   let [connected, setConnected] = useState(false)
   let [url, setUrl] = useState('')
   let [data, setData] = useState('')
@@ -18,6 +19,25 @@ const WSApi: React.FC<PageProps> = () => {
 
   return (
     <div className="ws_api flex column" style={{ height: '100%', padding: 10 }}>
+      <Tabs defaultActiveKey="1" style={{ flex: 1 }}>
+        <Tabs.TabPane tab="Formatted Test" key="1">
+          Content of Tab Pane 1
+        </Tabs.TabPane>
+        <Tabs.TabPane tab="Raw Test" key="2" style={{ flex: 1, height: '100%' }}>
+          <MonacoEditor
+            language="javascript"
+            theme="vs-light"
+            height="100%"
+            width="100%"
+            value={code}
+            options={{ selectOnLineNumbers: true, minimap: { enabled: false } }}
+            onChange={(x) => setCode(x)}
+            editorDidMount={() => {}}
+          />
+        </Tabs.TabPane>
+      </Tabs>
+      {/*
+
       <div className="flex column" style={{ background: 'white', padding: 10, flex: 0, height: 200 }}>
         <div className="flex row" style={{}}>
           <Input placeholder="enter the URL" value={url} onChange={(e) => setUrl(e.target.value)}></Input>
@@ -139,6 +159,7 @@ const WSApi: React.FC<PageProps> = () => {
           })}
         </Collapse>
       </div>
+        */}
     </div>
   )
 }
@@ -160,4 +181,4 @@ function useArray<T>(initialState: T[]) {
   return { state: state1, push: push, reset: reset }
 }
 
-export default WSApi
+export default WSTest

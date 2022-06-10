@@ -10,7 +10,7 @@ const RestApi: React.FC<PageProps> = () => {
   let [loading, setLoading] = useState(false)
 
   return (
-    <div className="about flex column" style={{ height: '100%', padding: 20 }}>
+    <div className="rest_api flex column" style={{ height: '100%', padding: 20 }}>
       <div className="flex row" style={{ background: 'white', padding: 10 }}>
         <Select defaultValue="GET" value={method} onChange={setMethod}>
           <Select.Option value="GET">GET</Select.Option>
