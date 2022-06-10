@@ -8,6 +8,12 @@ export const trayMenus: MenuItemConstructorOptions[] = [
     },
   },
   {
+    label: 'WS API TEST',
+    click: (): void => {
+      $tools.createWindow('WSApi')
+    },
+  },
+  {
     label: 'Home',
     click: (): void => {
       $tools.createWindow('Home')

@@ -2,7 +2,6 @@ import { Button, Input, Select } from 'antd'
 import { dnetwork } from 'corexxx'
 import React, { useState } from 'react'
 import './rest_api.less'
-
 const RestApi: React.FC<PageProps> = () => {
   let [method, setMethod] = useState('GET')
   let [url, setUrl] = useState('')

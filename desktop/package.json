@@ -81,6 +81,7 @@
   },
   "homepage": "https://github.com/dipankar08/testman#readme",
   "dependencies": {
-    "corexxx": "^1.0.87"
+    "corexxx": "^1.0.87",
+    "ws": "^8.8.0"
   }
 }
