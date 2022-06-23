@@ -1,5 +1,11 @@
 export const AppSideMenus = [
   {
+    key: 'adb',
+    href: '#/adb',
+    title: 'adb',
+    icon: 'terminal-box',
+  },
+  {
     key: 'rest_api',
     href: '#/rest_api',
     title: 'Rest API',
